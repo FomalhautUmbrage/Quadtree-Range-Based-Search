@@ -5,3 +5,5 @@ A quadtree is a type of “space partitioning tree” that enables fast lookup o
 on both x and y are split exactly in half, giving us four identically sized sub-regions in space
 3. The points stored in the parent node are distributed amongst the children according to their location in space
 4. The parent node’s point array is empty and will no longer be used to store points
+## Understanding Range-Based Search
+In a range-based search, we are interested obtaining a list of points within a given range. For example, I might want to know all points whose coordinates lie within the range 𝑥 ∈ (0,1), 𝑦 ∈ (−1, −0.4). If we are guaranteed that all search regions are contained entirely within a single node’s rectangular region of space, this problem is simple. However, if the search region intersects multiple nodes’ rectangles, the problem is more difficult. Recursion or stack-based algorithms are often used for this purpose. You are expected to investigate options for algorithms to solve this problem, and implement one.
