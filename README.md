@@ -10,4 +10,4 @@ In a range-based search, we are interested obtaining a list of points within a g
 # Command
 ## INIT
 **Parameters:** *m x0 y0 x1 y1* <br/>
-**Description:** Create a new quadtree. The parameter m, which is guaranteed to be greater than 4, represents the number of points that can be stored at a node before the quadtree expands. The points (x0,y0), (x1,y1) represent a rectangle
+**Description:** Create a new quadtree. The parameter m, which is guaranteed to be greater than 4, represents the number of points that can be stored at a node before the quadtree expands. The points (x0,y0), (x1,y1) represent a rectangle in space. This initial rectangle defines all of space for the quadtree – no point outside of this space may be stored. The boundary of this rectangle is included in the space of points.
