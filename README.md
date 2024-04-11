@@ -22,5 +22,10 @@ In a range-based search, we are interested obtaining a list of points within a g
 **Description:** Determine if there is at least one point stored in the quadtree with distance strictly less than d from the point (x,y)
 **Output**<br/>
 ***Point exists*** if at least one such point exists<br/>
-***Failure*** if the point is not within the range of  the quadtree or the exact point already exists
-
+***no point exists*** if there is no such point
+## NEAREST 
+**Parameters:** *x y* <br/>
+**Description:** Determine the nearest point stored in the quadtree from the point (x,y). In the case that there are multiple nearest points, for example, if the quadtree has points (0,0) and (1,1) and NEAREST 0.5 0.5 is called, choose the point whose x value is larger. In the case of a tie on the x values, choose the point whose x and y values are both larger.
+**Output**<br/>
+***xp yps*** the coordinates of the nearest point in the quadtree to the given point<br/>
+***no point exists*** if the quadtree is empty
