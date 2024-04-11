@@ -11,4 +11,16 @@ In a range-based search, we are interested obtaining a list of points within a g
 ## INIT
 **Parameters:** *m x0 y0 x1 y1* <br/>
 **Description:** Create a new quadtree. The parameter m, which is guaranteed to be greater than 4, represents the number of points that can be stored at a node before the quadtree expands. The points (x0,y0), (x1,y1) represent a rectangle in space. This initial rectangle defines all of space for the quadtree – no point outside of this space may be stored. The boundary of this rectangle is included in the space of points. This command is guaranteed to be called exactly once at the beginning of each test case.
-## INSERT <br/> **Parameters: ** *x y*<br/>
+## INSERT 
+**Parameters:** *x y* <br/>
+**Description:** Insert a point into the quadtree with coordinates (x,y), resize if needed. In case a point falls on the vertical boundary between the rectangles defined by two nodes, the point should be placed in the leftmost node. When a point falls on the horizontal boundary defined by two nodes, the point should be placed in the topmost node. If a point is at the exact intersection point of four ndoes, the left, top node is to be used.
+**Output**<br/>
+***Success*** if the point is within the range of quadtree<br/>
+***Failure*** if the point is not within the range of  the quadtree or the exact point already exists
+## SEARCH 
+**Parameters:** *x y d* <br/>
+**Description:** Determine if there is at least one point stored in the quadtree with distance strictly less than d from the point (x,y)
+**Output**<br/>
+***Point exists*** if at least one such point exists<br/>
+***Failure*** if the point is not within the range of  the quadtree or the exact point already exists
+
